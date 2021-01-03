@@ -1,0 +1,41 @@
+ALGORITHM Sentense_Characters
+VAR count:INTEGER:=0;
+VAR sentense:STRING;
+VAR letter:CHAR := sentense[count];
+BEGIN
+REPEAT
+Read(letter)
+count:= count+1
+UNTIL (letter <> ".")
+Write(count);
+END
+
+ALGORITHM NumberOfWords
+VAR i:INTEGER:=1;
+VAR sentense:STRING;
+VAR letter:CHAR := sentense[i];
+BEGIN 
+Read(letter)
+WHILE (letter <> "." ) DO
+IF (letter = " ") THEN
+    i:= i+1
+END_IF 
+END_WHILE
+Write(i)
+END
+
+ALGORITHM NumberOfVowels
+VAR j:INTEGER:=0;
+VAR sentense:STRING;
+VAR letter:CHAR := sentense[j];
+BEGIN
+Read(letter)
+WHILE (letter <> "." ) DO
+IF (letter = "a" Or "e" Or "i" Or "o" Or "u" Or "y") THEN
+    j:=j+1
+END_IF
+END_WHILE
+Write(j)
+END
+
+
